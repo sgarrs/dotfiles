@@ -1,0 +1,37 @@
+Xft.dpi: 102
+!Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+
+xcursor.theme:       Vanilla-DMZ
+xscreensaver.fade:   false
+xscreensaver.unfade: false
+! ===== urxvt =====
+! URxvt.scrollBar: off
+! URxvt.font: xft:monospace:size=12
+! URxvt.internalBorder:     22
+! =================
+!*foreground:	#FDFDFD
+!*cursorColor:	#C574DD
+*color0:	#000000
+*color1:	#ff5555
+*color2:	#50fa7b
+*color3:	#f1fa8c
+*color4:	#bd93f9
+*color5:	#ff79c6
+*color6:	#8be9fd
+*color7:	#bbbbbb
+*color8:	#44475a
+*color9:	#ff5555
+*color10:	#50fa7b
+*color11:	#f1fa8c
+*color12:	#bd93f9
+*color13:	#ff79c6
+*color14:	#8be9fd
+*color15:	#ffffff
+*color256:	#282a36
+*color257:	#f8f8f2
