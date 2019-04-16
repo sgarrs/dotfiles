@@ -1,0 +1,68 @@
+[
+    {
+        "border": "normal",
+        "floating": "auto_off",
+        "layout": "splitv",
+        "percent": 0.5,
+        "type": "con",
+        "nodes": [
+            {
+                "border": "normal",
+                "current_border_width": 2,
+                "floating": "auto_off",
+                "geometry": {
+                   "height": 360,
+                   "width": 640,
+                   "x": 0,
+                   "y": 0
+                },
+                "name": "term",
+                "percent": 0.5,
+                "swallows": [
+                   {
+                   "class": "^URxvt$"
+                   }
+                ],
+                "type": "con"
+            },
+            {
+                "border": "normal",
+                "current_border_width": 2,
+                "floating": "auto_off",
+                "geometry": {
+                   "height": 360,
+                   "width": 640,
+                   "x": 0,
+                   "y": 0
+                },
+                "name": "term",
+                "percent": 0.5,
+                "swallows": [
+                   {
+                   "class": "^URxvt$"
+                   }
+                ],
+                "type": "con"
+            }
+        ]
+    },
+    {
+        "border": "normal",
+        "current_border_width": 2,
+        "floating": "auto_off",
+        "geometry": {
+           "height": 321,
+           "width": 956,
+           "x": 962,
+           "y": 49
+        },
+        "name": "browser",
+        "percent": 0.5,
+        "swallows": [
+           {
+           "window_role": "^browser$"
+           }
+        ],
+        "type": "con"
+    }
+]
