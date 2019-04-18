@@ -8,7 +8,9 @@ font pango:DejaVu Sans Mono Nerd Font Complete 10
 
 # autostarts
 # exec --no-startup-id ~/bin/display.sh
+exec --no-startup-id compton
 exec --no-startup-id xsetroot -solid "#b8bcbf"
+exec --no-startup-id xflux -z 30033
 #exec --no-startup-id ~/bin/load_layouts.zsh
 
 set_from_resource $color0 color0 
@@ -74,13 +76,14 @@ client.placeholder          $color0        $color6        $foreground    $color6
 floating_modifier $mod
 
 #for_window [class="[.]*"] floating enable
+for_window [class="St" title="st"] border pixel 1
 
 # start a terminal
 #for_window [instance="urxvt" class="URxvt"] floating enable, sticky disable
 #for_window [instance="xcalc" class="XCalc"] floating enable, sticky disable
 bindsym $mod+Return exec st
 #for_window [instance="top" class="URxvt" title="top"] floating enable, resize set 750px 1009px, move absolute position 1160px 40px
-bindsym $mod+t [class="top" title="top"] exec --no-startup-id urxvt -name top -e gtop
+bindsym $mod+t exec --no-startup-id urxvt -name top -e gtop
 
 bindsym $mod+Control+Shift+l exec "i3-msg resize set 960px 1060px, move position 960px 0px"
 bindsym $mod+Control+Shift+h exec "i3-msg resize set 960px 1060px, move position 0px 0px"
