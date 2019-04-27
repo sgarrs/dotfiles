@@ -7,15 +7,17 @@ Xft.autohint: false
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 
-xcursor.theme:       Vanilla-DMZ
-xscreensaver.fade:   false
-xscreensaver.unfade: false
+!Xcursor.theme:       Capitaine-Cursors
+Xcursor.size: 16
+Xscreensaver.fade:   false
+Xscreensaver.unfade: false
 ! ===== urxvt =====
 ! URxvt.scrollBar: off
 ! URxvt.font: xft:monospace:size=12
 ! URxvt.internalBorder:     22
 ! =================
 !*foreground:	#FDFDFD
+!*background: #c79081
 !*cursorColor:	#C574DD
 *color0:	#000000
 *color1:	#ff5555
