@@ -1,3 +1,4 @@
 .git
 .swp
-.zplug
+zsh/.zplug
+vim/.local
