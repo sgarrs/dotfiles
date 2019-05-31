@@ -21,7 +21,6 @@ Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'sass', 'less', 'styl'] }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'itchyny/lightline.vim' | Plug 'mengelbrecht/lightline-bufferline'
-Plug 'w0rp/ale'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'xolox/vim-notes' | Plug 'xolox/vim-misc'
 Plug 'suan/vim-instant-markdown'
@@ -30,6 +29,7 @@ Plug 'vim-scripts/YankRing.vim'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
+Plug 'w0rp/ale'
 
 " completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -42,6 +42,11 @@ Plug 'mattn/emmet-vim'
 Plug 'moll/vim-node'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'godlygeek/tabular'
+Plug 'easymotion/vim-easymotion'
+Plug 'junegunn/gv.vim'
+Plug 'tpope/vim-rhubarb'
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
@@ -97,13 +102,37 @@ if has("persistent_undo")
   set undofile
 endif
 
+" startify
+" let g:startify_session_dir = '~/.dotfiles/vim/.vim/session'
+let g:startify_custom_header = [
+        \ '                                ',
+        \ '            __                  ',
+        \ '    __  __ /\_\    ___ ___      ',
+        \ '   /\ \/\ \\/\ \ /'' __` __`\   ',
+        \ '   \ \ \_/ |\ \ \/\ \/\ \/\ \   ',
+        \ '    \ \___/  \ \_\ \_\ \_\ \_\  ',
+        \ '     \/__/    \/_/\/_/\/_/\/_/  ',
+        \ ]
+
+" ale
+let g:ale_linters = {
+\  'javascript': ['eslint'],
+\}
+"let g:ale_open_list = 1
+"let g:ale_sign_column_always = 1
+
 " GENERAL CONFIG
 
 " colors
 syntax on
+" line number column
+highlight LineNr ctermbg=0 ctermfg=8
+" gutter
+highlight SignColumn ctermbg=0
 
 " interface
 set number
+set nowrap
 
 " switch buffers without saving
 set hidden
