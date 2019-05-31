@@ -2,3 +2,4 @@
 .swp
 zsh/.zplug
 vim/.local
+vim/.config/nvim/.netrwhist
