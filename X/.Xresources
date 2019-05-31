@@ -19,7 +19,7 @@ Xscreensaver.unfade: false
 !*foreground:	#FDFDFD
 !*background: #c79081
 !*cursorColor:	#C574DD
-*color0:	#000000
+*color0:	#262626
 *color1:	#ff5555
 *color2:	#50fa7b
 *color3:	#f1fa8c
@@ -37,3 +37,4 @@ Xscreensaver.unfade: false
 *color15:	#ffffff
 *color256:	#282a36
 *color257:	#f8f8f2
+*color258:	#262626
