@@ -43,7 +43,9 @@ let g:deoplete#sources#ternjs#filetypes = [
   \ ]
 let g:deoplete#sources#ternjs#types = 1
 let g:deoplete#sources#ternjs#include_keywords = 1
-autocmd InsertLeave * silent! pclose!
+set completeopt+=noinsert
+" autocmd InsertLeave * silent! pclose!
+autocmd CompleteDone * silent! pclose!
 
 " echodoc
 let g:echodoc#enable_at_startup = 1
@@ -85,3 +87,8 @@ let g:ale_linters = {
 \}
 "let g:ale_open_list = 1
 "let g:ale_sign_column_always = 1
+
+"signifiy
+highlight SignifySignAdd    ctermbg=NONE ctermfg=green  guifg=#00ff00 cterm=NONE gui=NONE
+highlight SignifySignDelete ctermbg=NONE ctermfg=red    guifg=#ff0000 cterm=NONE gui=NONE
+highlight SignifySignChange ctermbg=NONE ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
