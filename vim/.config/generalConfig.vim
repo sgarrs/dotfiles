@@ -79,3 +79,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " fuzzy find
 set path+=**
+
+" custom keybinds
+inoremap jj <ESC>
