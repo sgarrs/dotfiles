@@ -75,11 +75,11 @@ let g:startify_custom_header = [
         \ ]
 
 " ale
-let g:ale_linters = {
-\  'javascript': ['eslint'],
-\}
+let g:ale_linter_aliases = {'jsx': ['css', 'javascript']}
+let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
+let g:ale_fixers = {'jsx': ['prettier', 'eslint']}
 "let g:ale_open_list = 1
-"let g:ale_sign_column_always = 1
+let g:ale_sign_column_always = 1
 
 "signifiy
 highlight SignifySignAdd    ctermbg=NONE ctermfg=green  guifg=#00ff00 cterm=NONE gui=NONE
