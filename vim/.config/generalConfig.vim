@@ -8,6 +8,8 @@ syntax enable
 highlight LineNr ctermbg=0 ctermfg=8
 " gutter
 highlight SignColumn ctermbg=0
+" search
+highlight Search cterm=NONE ctermfg=0 ctermbg=10
 
 " interface
 set number

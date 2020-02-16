@@ -82,6 +82,10 @@ let g:ale_fixers = {'jsx': ['prettier', 'eslint']}
 let g:ale_sign_column_always = 1
 
 "signifiy
-highlight SignifySignAdd    ctermbg=NONE ctermfg=green  guifg=#00ff00 cterm=NONE gui=NONE
-highlight SignifySignDelete ctermbg=NONE ctermfg=red    guifg=#ff0000 cterm=NONE gui=NONE
-highlight SignifySignChange ctermbg=NONE ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
+highlight SignifySignAdd    ctermbg=0 ctermfg=2  guifg=2 cterm=NONE gui=NONE
+highlight SignifySignDelete ctermbg=0 ctermfg=1    guifg=1 cterm=NONE gui=NONE
+highlight SignifySignChange ctermbg=0 ctermfg=3 guifg=3 cterm=NONE gui=NONE
+
+" emmet
+let g:user_emmet_mode='a'
+let g:user_emmet_leader_key=','
