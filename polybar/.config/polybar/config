@@ -48,7 +48,7 @@ alert = ${colors.color1}
 [bar/bar1]
 monitor = ${env:MONITOR:HDMI2}
 width = 100%
-height = 30
+height = 25
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
@@ -63,22 +63,22 @@ line-color = ${colors.color1}
 border-size = 0
 border-color = #00000000
 
-padding-left = 2
-padding-right = 2
+padding-left = 4
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0
 
-module-margin-left = 1
-module-margin-right = 1
-
-font-0 = "DejaVuSansMono Nerd Font:size=16;0"
-font-1 = "Weather Icons:size=16;1"
-;font-2 = siji:pixelsize=10;1
+font-0 = "DejaVu Sans:size=10;2"
+font-1 = "Weather Icons:size=10;1"
+font-2 = "DejaVuSansMono Nerd Font:size=12:weight=bold;3"
+font-3 = "DejaVuSansMono Nerd Font:size=10;2"
 
 modules-left = powermenu
-modules-center = xwindow
-modules-right = pulseaudio openweathermap-fullfeatured date
+modules-center =
+modules-right = updates-arch date openweathermap-fullfeatured
 
-tray-position = right
-tray-padding = 2
+tray-position = center
+tray-padding = 1
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -98,7 +98,7 @@ cursor-scroll = ns-resize
 [bar/bar2]
 monitor = ${env:MONITOR:HDMI2}
 width = 100%
-height = 30
+height = 25
 bottom = true
 ;offset-x = 1%
 ;offset-y = 100%
@@ -114,22 +114,21 @@ line-color = ${colors.color1}
 border-size = 0
 border-color = #00000000
 
-padding-left = 2
-padding-right = 2
+padding-left = 4
+padding-right = 4
+module-margin-left = 5
+module-margin-right = 0
 
-module-margin-left = 0
-module-margin-right = 2
-
-font-0 = "DejaVuSansMono Nerd Font:size=16;0"
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-;font-2 = siji:pixelsize=10;1
+font-0 = "DejaVu Sans:size=10;2"
+font-1 = "DejaVuSansMono Nerd Font:size=10;2"
 
 modules-left = i3
-modules-center = updates-arch
-modules-right = filesystem memory cpu eth temperature
+modules-center =
+modules-right = spotify pulseaudio
+;modules-right = pulseaudio filesystem memory cpu temperature eth
 
-tray-position = right
-tray-padding = 2
+tray-position = center
+tray-padding = 1
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -151,11 +150,16 @@ type = custom/script
 exec = ~/.bin/polybar-scripts/openweathermap-fullfeatured/openweathermap-fullfeatured.sh
 interval = 600
 label-font = 2
+format-background = ${colors.color7}
+format-foreground = ${colors.color0}
 
 [module/updates-arch]
 type = custom/script
 exec = ~/.bin/polybar-scripts/updates-arch-combined/updates-arch-combined.sh
 interval = 600
+label-font = 4
+label-font-foreground = ${colors.color2}
+format-padding = 4
 
 [module/xwindow]
 type = internal/xwindow
@@ -182,6 +186,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
+mount-1 = /home/dev/storage
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-} %percentage_used%%
 label-unmounted = %mountpoint% not mounted
@@ -216,7 +221,7 @@ index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
 label-mode-padding = 0
 label-mode-foreground = #000
@@ -225,16 +230,17 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-foreground = ${colors.background}
-label-focused-background = ${colors.color14}
+label-focused-background = ${colors.color3}
 ;label-focused-underline= ${colors.primary}
-label-focused-padding = 1
+label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-padding = 1
+label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
+label-visible-foreground = ${self.label-focused-foreground}
 label-visible-background = ${self.label-focused-background}
 ;label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
@@ -287,7 +293,7 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix = "CPU "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.color2}
 ;format-underline = ${colors.color1}
 label = %percentage:2%%
 
@@ -295,9 +301,9 @@ label = %percentage:2%%
 type = internal/memory
 interval = 2
 format-prefix = "RAM "
-format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = ${colors.color6}
 label = %percentage_used%%
+format-prefix-foreground = ${colors.color2}
 
 [module/wlan]
 type = internal/network
@@ -323,12 +329,12 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = wlo1
+interface = enp1s0
 interval = 3.0
 
 ;format-connected-underline = ${colors.color2}
 format-connected-prefix = "IP "
-format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-prefix-foreground = ${colors.color2}
 label-connected = %local_ip%
 
 format-disconnected =
@@ -346,9 +352,12 @@ date-alt = " %Y-%m-%d"
 
 time = %I:%M
 time-alt = %H:%M:%S
+format-background = ${colors.color7}
+format-foreground = ${colors.color0}
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
+format-padding = 3
 ;format-underline = ${colors.color257}
 
 label = %date% %time%
@@ -357,13 +366,13 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
-label-volume-foreground = ${root.foreground}
+label-volume = 
+label-volume-foreground = ${colors.foreground}
 
 label-muted = 🔇 muted
-label-muted-foreground = #666
+label-muted-foreground = ${colors.color8}
 
-bar-volume-width = 10
+bar-volume-width = 15
 bar-volume-foreground-0 = #55aa55
 bar-volume-foreground-1 = #55aa55
 bar-volume-foreground-2 = #55aa55
@@ -373,11 +382,11 @@ bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
 bar-volume-indicator = |
-bar-volume-indicator-font = 2
+bar-volume-indicator-font = 0
 bar-volume-fill = ─
-bar-volume-fill-font = 2
+bar-volume-fill-font = 0
 bar-volume-empty = ─
-bar-volume-empty-font = 2
+bar-volume-empty-font = 0
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/alsa]
@@ -385,7 +394,7 @@ type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL
-label-volume-foreground = ${root.foreground}
+label-volume-foreground = ${colors.color2}
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
@@ -454,21 +463,22 @@ format-warn = <ramp> <label-warn>
 label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
+ramp-foreground = ${colors.color2}
 
 ramp-0 = 
 ramp-1 = TEMP
 ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
 type = custom/menu
 
 expand-right = true
-
 format-spacing = 1
+format-padding = 1
 
+label-open-font = 3
 label-open = 
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.color1}
 label-close = x cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
@@ -502,3 +512,11 @@ margin-top = 5
 margin-bottom = 5
 
 ; vim:ft=dosini
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python ~/.bin/polybar-scripts/polybar-spotify/spotify_status.py -f '{artist}: {song}'
+format-underline = #1db954
