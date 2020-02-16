@@ -304,3 +304,4 @@ bindsym $mod+b exec feh -B "#262626" --randomize -D 60.0 --scale-down ~/img/* &
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym $mod+Shift+Return exec cd "$(xcwd)" && st &
