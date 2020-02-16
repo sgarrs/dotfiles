@@ -1,8 +1,8 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " general
-"Plug 'tpope/vim-sensible'
-"Plug 'jeffkreeftmeijer/neovim-sensible'
+" Plug 'tpope/vim-sensible'
+" Plug 'jeffkreeftmeijer/neovim-sensible'
 
 " syntax
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
