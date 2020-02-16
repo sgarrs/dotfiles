@@ -84,3 +84,24 @@ set path+=**
 
 " custom keybinds
 inoremap jj <ESC>
+
+augroup FiletypeGroup
+  autocmd!
+  au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+augroup END
+
+" omnifuncs
+"  autocmd FileType javascript,javascript.jsx setlocal omnifunc=javascriptcomplete#CompleteJS
+augroup omnifuncs
+  autocmd!
+  autocmd FileType css,sass,scss,less setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+augroup end
+" tern
+if exists('g:plugs["tern_for_vim"]')
+  let g:tern_show_argument_hints = 'on_hold'
+  let g:tern_show_signature_in_pum = 1
+  autocmd FileType javascript,javascript.jsx setlocal omnifunc=tern#Complete,javascriptcomplete#CompleteJS
+endif

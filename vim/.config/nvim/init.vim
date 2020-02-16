@@ -21,28 +21,32 @@ Plug 'ekalinin/dockerfile.vim', { 'for': 'dockerfile' }
 " interface
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
-" Plug 'airblade/vim-gitgutter'
+ " Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim' | Plug 'mengelbrecht/lightline-bufferline'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'xolox/vim-notes' | Plug 'xolox/vim-misc'
 Plug 'suan/vim-instant-markdown'
 Plug 'junegunn/limelight.vim'
-Plug 'vim-scripts/YankRing.vim'
+" Plug 'vim-scripts/YankRing.vim'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
 Plug 'w0rp/ale'
+Plug 'craigemery/vim-autotag'
+Plug 'KabbAmine/vCoolor.vim'
 
 " completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'Shougo/echodoc.vim'
 Plug 'mattn/emmet-vim'
 Plug 'sirver/Ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'townk/vim-autoclose'
-
-" Plug 'ternjs/tern_for_vim', {'do': 'npm install && npm install -g tern'}, { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'steelsojka/deoplete-flow'
+" Plug 'townk/vim-autoclose'
+Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
+" Plug 'ycm-core/YouCompleteMe'
+Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 
 " commands
 Plug 'moll/vim-node'

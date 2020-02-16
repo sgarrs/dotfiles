@@ -35,29 +35,22 @@ vmap <Leader>ns :NoteFromSelectedText<CR>
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#ternjs#filetypes = [
-  \ 'jsx',
-  \ 'javascript',
-  \ 'javascript.jsx',
-  \ 'vue'
-  \ ]
-let g:deoplete#sources#ternjs#types = 1
-let g:deoplete#sources#ternjs#include_keywords = 1
-set completeopt+=noinsert
-" autocmd InsertLeave * silent! pclose!
-autocmd CompleteDone * silent! pclose!
+let g:deoplete#auto_complete_delay = 0
+let g:deoplete#sources#ternjs#docs = 1
 
 " echodoc
 let g:echodoc#enable_at_startup = 1
 let g:echodoc#type = 'floating'
+set completeopt-=preview
 highlight link EchoDocFloat Pmenu
-" set cmdheight=2
 
-" ternjs
-let g:tern#command = ["tern"]
-let g:tern#arguments = ["--persistent"]
-highlight Pmenu ctermbg=8 ctermfg=15
-highlight PmenuSel ctermbg=0 ctermfg=6
+" ycm
+" let g:ycm_auto_trigger = 0
+let g:ycm_max_num_candidates = 10
+highlight Pmenu ctermbg=8 ctermfg=7
+highlight PmenuSel ctermbg=7 ctermfg=4
+highlight PmenuSbar ctermbg=256
+highlight PmenuThumb ctermbg=256 ctermfg=7
 
 " yankring
 let g:yankring_history_dir = '~/.yankring_history'
