@@ -1,6 +1,7 @@
 .git
 .swp
-.tags
+tags
+.bak
 zsh/.zplug
 vim/.local
 vim/.config/nvim/.netrwhist
