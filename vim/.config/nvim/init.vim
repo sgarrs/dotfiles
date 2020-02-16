@@ -16,7 +16,7 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': ['sass', 'scss'] }
 Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 Plug 'digitaltoad/vim-jade', { 'for': 'pug' }
 Plug 'ekalinin/dockerfile.vim', { 'for': 'dockerfile' }
-Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'sass', 'less', 'styl'] }
+" Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'sass', 'less', 'styl'] }
 
 " interface
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }

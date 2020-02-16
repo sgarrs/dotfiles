@@ -2,6 +2,8 @@
 
 " colors
 syntax on
+filetype plugin on
+syntax enable
 " line number column
 highlight LineNr ctermbg=0 ctermfg=8
 " gutter
