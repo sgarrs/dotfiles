@@ -85,6 +85,8 @@ gaps inner 16
 gaps outer 0
 smart_borders on
 for_window [window_role="pop-up"] floating enable
+for_window [class="Gpick"] floating enable
+for_window [floating] move position center
 #for_window [class="feh"] floating enable
 #for_window [class="St" title="st"] border pixel 1
 
@@ -92,8 +94,8 @@ for_window [window_role="pop-up"] floating enable
 #for_window [instance="urxvt" class="URxvt"] floating enable, sticky disable
 #for_window [instance="xcalc" class="XCalc"] floating enable, sticky disable
 bindsym $mod+Return exec st
-#for_window [instance="top" class="URxvt" title="top"] floating enable, resize set 750px 1009px, move absolute position 1160px 40px
-bindsym $mod+t exec --no-startup-id urxvt -name top -e gtop
+for_window [class="St" title="top"] floating enable
+bindsym $mod+t exec --no-startup-id st -t top -e gtop
 
 bindsym $mod+Control+Shift+l exec "i3-msg resize set 960px 1060px, move position 960px 0px"
 bindsym $mod+Control+Shift+h exec "i3-msg resize set 960px 1060px, move position 0px 0px"
