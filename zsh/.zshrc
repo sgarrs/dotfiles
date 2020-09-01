@@ -2,6 +2,7 @@ export LANG=en_US.UTF-8
 export ZPLUG_HOME=~/.zplug
 export XDG_SESSION_DESKTOP=~/desk
 export XDG_SESSION_TYPE="X11"
+export EDITOR="/usr/bin/nvim"
 #PATH=$HOME/.nvm/versions/node/v11.14.0/bin:$HOME/.nvm/versions/node/v11.14.0/lib/node_modules/npm/bin:$PATH
 
 source $HOME/.zplug/init.zsh
@@ -16,9 +17,9 @@ zplug "zplug/zplug", hook-build:'zplug --self-manage'
 #zplug "lukechilds/zsh-nvm"
 
 zplug "zsh-users/zsh-completions", defer:0, use:contrib/completion/zsh
-zplug "zsh-users/zsh-autosuggestions", defer:2
-zplug "zsh-users/zsh-syntax-highlighting", defer:3
-zplug "zsh-users/zsh-history-substring-search", defer:3
+zplug "zsh-users/zsh-autosuggestions", defer:1
+zplug "zsh-users/zsh-history-substring-search", defer:2
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 zplug "lukechilds/zsh-better-npm-completion", defer:3, use:contrib/completion/zsh
 zplug "felixr/docker-zsh-completion", defer:3, use:contrib/completion/zsh
@@ -46,6 +47,7 @@ zplug "plugins/cp", from:oh-my-zsh
 #zplug "rapgenic/zsh-git-complete-urls"
 #zplug "robbyrussell/oh-my-zsh", use:"lib/clipboard.zsh"
 
+
 zstyle ':prezto:module:utility:ls' color 'yes'
 
 zstyle ':completion:*' rehash true
@@ -64,6 +66,17 @@ fi
 
 zplug load
 
+pq() {
+    (( $#argv )) || return 0
+    print -r -l -- ${(qqqq)argv}
+}
+pz() {
+    local arg
+    for arg; do
+        pq ${(z)arg}
+    done
+}
+
 setopt auto_cd
 KEYTIMEOUT=1
 
@@ -75,10 +88,13 @@ SPACESHIP_VI_MODE_SHOW=false
 # dircolors
 eval `dircolors -b $HOME/.dircolors/Dracula.dircolors`
 
+#ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+
 alias ls='ls --color=always'
 alias vim='nvim'
 alias cp='cpv'
 bindkey '^l' autosuggest-accept
+bindkey '^n' autosuggest-accept
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn

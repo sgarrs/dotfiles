@@ -31,7 +31,9 @@ Xscreensaver.unfade: false
 *color9:	#ff5555
 *color10:	#50fa7b
 *color11:	#f1fa8c
+!*color12:	#ffffff
 *color12:	#bd93f9
+!*color13:	#44475a
 *color13:	#ff79c6
 *color14:	#8be9fd
 *color15:	#ffffff

@@ -3,7 +3,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 " general
 " Plug 'tpope/vim-sensible'
 " Plug 'jeffkreeftmeijer/neovim-sensible'
-Plug 'jiangmiao/auto-pairs'
 
 " syntax
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
@@ -17,42 +16,37 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': ['sass', 'scss'] }
 Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 Plug 'digitaltoad/vim-jade', { 'for': 'pug' }
 Plug 'ekalinin/dockerfile.vim', { 'for': 'dockerfile' }
-" Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'sass', 'less', 'styl'] }
+Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'sass', 'less', 'styl'] }
 
 " interface
-" Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-" Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
-" Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
+ " Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim' | Plug 'mengelbrecht/lightline-bufferline'
-" Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'yggdroot/indentline'
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'xolox/vim-notes' | Plug 'xolox/vim-misc'
 Plug 'suan/vim-instant-markdown'
 Plug 'junegunn/limelight.vim'
-" Plug 'vim-scripts/YankRing.vim'
+Plug 'vim-scripts/YankRing.vim'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
-" Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 Plug 'craigemery/vim-autotag'
-Plug 'KabbAmine/vCoolor.vim'
 
 " completion
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
-" Plug 'Shougo/echodoc.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/echodoc.vim'
+" Plug 'mattn/emmet-vim'
 " Plug 'sirver/Ultisnips'
 " Plug 'honza/vim-snippets'
-" Plug 'steelsojka/deoplete-flow'
 " Plug 'townk/vim-autoclose'
-" Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
-" Plug 'ycm-core/YouCompleteMe'
-" Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'kevinoid/vim-jsonc'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern'}
+" Plug 'othree/jspc.vim'
+
+" Plug 'ternjs/tern_for_vim', {'do': 'npm install && npm install -g tern'}
 
 " commands
-Plug 'mattn/emmet-vim'
 Plug 'moll/vim-node'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -60,7 +54,7 @@ Plug 'godlygeek/tabular'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/gv.vim'
 Plug 'tpope/vim-rhubarb'
-" Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
@@ -68,11 +62,9 @@ call plug#end()
 set guifont=DejaVu\ Sans\ Mono\ Nerd\ Font\ Complete
 
 " keybinds
-" map <C-h> :NERDTreeToggle<CR>
-" map <F1> :IndentGuidesToggle<CR>
-nnoremap gc :exe ':silent !vivaldi-stable %'<CR>
+map <C-h> :NERDTreeToggle<CR>
+map <F1> :IndentGuidesToggle<CR>
 
 " source config files
 source ~/.config/pluginConfig.vim
 source ~/.config/generalConfig.vim
-source ~/.config/highlighting.vim

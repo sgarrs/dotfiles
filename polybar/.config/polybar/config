@@ -73,7 +73,7 @@ font-1 = "Weather Icons:size=10;1"
 font-2 = "DejaVuSansMono Nerd Font:size=12:weight=bold;3"
 font-3 = "DejaVuSansMono Nerd Font:size=10;2"
 
-modules-left = powermenu
+modules-left =
 modules-center =
 modules-right = updates-arch date openweathermap-fullfeatured
 
@@ -122,7 +122,7 @@ module-margin-right = 0
 font-0 = "DejaVu Sans:size=10;2"
 font-1 = "DejaVuSansMono Nerd Font:size=10;2"
 
-modules-left = i3
+modules-left = powermenu i3
 modules-center =
 modules-right = spotify pulseaudio
 ;modules-right = pulseaudio filesystem memory cpu temperature eth
@@ -222,6 +222,8 @@ wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
+;strip-wsnumbers = false
+;fuzzy-match = true
 
 label-mode-padding = 0
 label-mode-foreground = #000
@@ -369,7 +371,7 @@ format-volume = <label-volume> <bar-volume>
 label-volume = 
 label-volume-foreground = ${colors.foreground}
 
-label-muted = 🔇 muted
+label-muted = 🔇 mute
 label-muted-foreground = ${colors.color8}
 
 bar-volume-width = 15

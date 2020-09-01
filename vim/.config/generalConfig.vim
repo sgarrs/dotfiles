@@ -1,15 +1,11 @@
 " GENERAL CONFIG
 
-" colors
+" syntax
 syntax on
 filetype plugin on
 syntax enable
-" line number column
-highlight LineNr ctermbg=0 ctermfg=8
-" gutter
-highlight SignColumn ctermbg=0
-" search
-highlight Search cterm=NONE ctermfg=0 ctermbg=10
+
+set cursorline
 
 " interface
 set number
@@ -36,7 +32,7 @@ set ignorecase
 " try to be smart about cases when searching
 set smartcase
 
-" highlight serach results
+" highlight search results
 set hlsearch
 set incsearch
 
@@ -68,8 +64,8 @@ set noswapfile
 
 set expandtab
 set smarttab
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 
 " linebreak
 set lbr
@@ -77,6 +73,8 @@ set tw=500
 
 set ai
 set si
+
+set mouse=nv
 
 " return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -90,6 +88,7 @@ inoremap jj <ESC>
 augroup FiletypeGroup
   autocmd!
   au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+  au BufNewFile,BufRead *.pug set filetype=pug
 augroup END
 
 " omnifuncs
@@ -107,3 +106,12 @@ if exists('g:plugs["tern_for_vim"]')
   let g:tern_show_signature_in_pum = 1
   autocmd FileType javascript,javascript.jsx setlocal omnifunc=tern#Complete,javascriptcomplete#CompleteJS
 endif
+
+" Show syntax highlighting groups for word under cursor
+nmap <F5> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
