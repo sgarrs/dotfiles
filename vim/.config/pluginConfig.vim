@@ -91,9 +91,6 @@ let g:startify_custom_header = [
         \ '     \/__/    \/_/\/_/\/_/\/_/  ',
         \ ]
 
-
-"signifiy
-
 " emmet
 let g:user_emmet_mode='a'
 let g:user_emmet_leader_key=','

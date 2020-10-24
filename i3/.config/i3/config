@@ -60,9 +60,6 @@ focus_follows_mouse no
 #set $foreground #b8bcbf
 
 # colorclass                border         background     text           indicator     child_border
-client.focused              $color0        $color0        $color15       $color1       $color6
-client.focused_inactive     $color0        $color0        $color8        $color0       $background
-client.unfocused            $color0        $color0        $color8        $color0       $background
 client.focused              $color0        $foreground    $background    $color1       $color6
 client.focused_inactive     $foreground    $background    $color4        $color0       $color0
 client.unfocused            $foreground    $background    $foreground    $color0       $color0
