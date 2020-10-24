@@ -43,7 +43,8 @@ vmap <Leader>ns :NoteFromSelectedText<CR>
 
 " yankring
 let g:yankring_history_dir = '~/.yankring_history'
-let g:yankring_clipboard_monitor = 0
+let g:yankring_clipboard_monitor = 1
+nnoremap <silent> <Leader>y :YRShow<CR>
 
 " undo
 if has("persistent_undo")
