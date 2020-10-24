@@ -3,7 +3,10 @@ export ZPLUG_HOME=~/.zplug
 export XDG_SESSION_DESKTOP=~/desk
 export XDG_SESSION_TYPE="X11"
 export EDITOR="/usr/bin/nvim"
-#PATH=$HOME/.nvm/versions/node/v11.14.0/bin:$HOME/.nvm/versions/node/v11.14.0/lib/node_modules/npm/bin:$PATH
+
+NPM_PACKAGES="${HOME}/.npm-packages"
+export PATH="$PATH:$NPM_PACKAGES/bin"
+export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 
 source $HOME/.zplug/init.zsh
 
