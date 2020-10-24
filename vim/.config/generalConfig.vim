@@ -84,6 +84,17 @@ set path+=**
 
 " custom keybinds
 inoremap jj <ESC>
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprev<CR>
+nnoremap <C-h> <C-W>h
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
+" find a way to map Ctrl+Shift+letter to move windows
+" nnoremap <C-S>h <C-W>H
+" nnoremap <C-S-J> <C-W>J
+" nnoremap <C-S-K> <C-W>K
+" nnoremap <C-S-L> <C-W>L
 
 augroup FiletypeGroup
   autocmd!

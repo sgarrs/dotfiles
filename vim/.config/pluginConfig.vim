@@ -29,7 +29,34 @@ autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 let g:lightline.tabline = {'colorscheme': 'one', 'left': [['buffers']], 'right': []}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
 let g:lightline.component_type = {'buffers': 'tabsel'}
-let g:lightline#bufferline#show_number=1
+let s:palette = g:lightline#colorscheme#one#palette
+let g:lightline#bufferline#show_number=0
+let g:lightline#bufferline#enable_nerdfont=1
+" let s:palette.tabline.tabsel = [['#8be9fd', '#262626', 0, 21]]
+" let s:palette.tabline.left = [['#8be9fd', '#262626']]
+" let s:palette.tabline.right = [['#8be9fd', '#262626']]
+" let s:palette.tabline.middle = [['#8be9fd', '#262626']]
+" call lightline#colorscheme()
+nmap <Leader>1 <Plug>lightline#bufferline#go(1)
+nmap <Leader>2 <Plug>lightline#bufferline#go(2)
+nmap <Leader>3 <Plug>lightline#bufferline#go(3)
+nmap <Leader>4 <Plug>lightline#bufferline#go(4)
+nmap <Leader>5 <Plug>lightline#bufferline#go(5)
+nmap <Leader>6 <Plug>lightline#bufferline#go(6)
+nmap <Leader>7 <Plug>lightline#bufferline#go(7)
+nmap <Leader>8 <Plug>lightline#bufferline#go(8)
+nmap <Leader>9 <Plug>lightline#bufferline#go(9)
+nmap <Leader>0 <Plug>lightline#bufferline#go(10)
+nmap <Leader>d1 <Plug>lightline#bufferline#delete(1)
+nmap <Leader>d2 <Plug>lightline#bufferline#delete(2)
+nmap <Leader>d3 <Plug>lightline#bufferline#delete(3)
+nmap <Leader>d4 <Plug>lightline#bufferline#delete(4)
+nmap <Leader>d5 <Plug>lightline#bufferline#delete(5)
+nmap <Leader>d6 <Plug>lightline#bufferline#delete(6)
+nmap <Leader>d7 <Plug>lightline#bufferline#delete(7)
+nmap <Leader>d8 <Plug>lightline#bufferline#delete(8)
+nmap <Leader>d9 <Plug>lightline#bufferline#delete(9)
+nmap <Leader>d0 <Plug>lightline#bufferline#delete(10)
 
 " limelight
 let g:limelight_conceal_ctermfg = 8
@@ -216,7 +243,7 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
-nmap <C-h> :CocCommand explorer<CR>
+nmap <C-h><C-h> :CocCommand explorer<CR>
 " nmap <silent> <space>t <Plug>(coc-terminal-toggle)
 " tnoremap <space>t <Plug>(coc-terminal-toggle)
 
