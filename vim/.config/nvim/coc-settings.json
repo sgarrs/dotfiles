@@ -38,4 +38,5 @@
   "stylelintplus.autoFixOnSave": true,
   "tsserver.npm": "/usr/bin/npm",
   "explorer.icon.enableNerdfont": true
+  "explorer.icon.enableNerdfont": true,
 }

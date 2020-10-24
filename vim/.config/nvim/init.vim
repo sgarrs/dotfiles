@@ -27,6 +27,7 @@ Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
 Plug 'craigemery/vim-autotag'
 Plug 'KabbAmine/vCoolor.vim'
+Plug 'lambdalisue/nerdfont.vim'
 
 " completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
