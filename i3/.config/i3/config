@@ -111,7 +111,7 @@ bindsym $mod+Control+Shift+n exec "i3-msg resize set 960px 530px, move position 
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym Control+space exec rofi -show run
+bindsym Control+space exec rofi -show run -modi calc -no-show-match -no-sort
 #bindsym Control+Shift+o exec chromium
 #bindsym Control+Shift+z exec zeal
 #bindsym $mod+Shift+b exec feh --bg-fill --randomize ~/img/wallpaper/waterhouse/*
