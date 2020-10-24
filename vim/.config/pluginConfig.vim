@@ -9,17 +9,6 @@ let g:indentLine_char = '|'
 let g:indentLine_fileTypeExclue = ['coc-explorer']
 nmap <F3> :IndentLinesToggle<CR>
 
-" nerdtree
-" autocmd StdinReadPre * let s:std_in=1
-"   " open nerdtree if starting vim with no file specified
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-"   " open nerdtree if starting vim if specifying a directory
-" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
-" let NERDTreeChDirMode = 1
-" let NERDTreeBookmarksFile = '/home/dev/.config/.NERDTreeBookmarks'
-" let NERDTreeShowBookmarks = 1
-" let NERDTreeShowHidden = 1
-
 " lightline
 set showtabline=2
 " let g:lightline = {'colorscheme': 'one'}
@@ -74,12 +63,6 @@ let g:startify_custom_header = [
         \ '     \/__/    \/_/\/_/\/_/\/_/  ',
         \ ]
 
-" ale
-let g:ale_linter_aliases = {'jsx': ['css', 'javascript']}
-let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
-let g:ale_fixers = {'jsx': ['prettier', 'eslint']}
-"let g:ale_open_list = 1
-let g:ale_sign_column_always = 1
 
 "signifiy
 
@@ -87,7 +70,7 @@ let g:ale_sign_column_always = 1
 let g:user_emmet_mode='a'
 let g:user_emmet_leader_key=','
 
-" coc.nvim
+" ========== COC.NVIM ==========
 
 " TextEdit might fail if hidden is not set.
 set hidden

@@ -1,8 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " general
-" Plug 'tpope/vim-sensible'
-" Plug 'jeffkreeftmeijer/neovim-sensible'
 Plug 'jiangmiao/auto-pairs'
 
 " syntax
@@ -17,37 +15,19 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': ['sass', 'scss'] }
 Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 Plug 'digitaltoad/vim-jade', { 'for': 'pug' }
 Plug 'ekalinin/dockerfile.vim', { 'for': 'dockerfile' }
-" Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'sass', 'less', 'styl'] }
 
 " interface
-" Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-" Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
-" Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim' | Plug 'mengelbrecht/lightline-bufferline'
-" Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'yggdroot/indentline'
 Plug 'xolox/vim-notes' | Plug 'xolox/vim-misc'
 Plug 'suan/vim-instant-markdown'
 Plug 'junegunn/limelight.vim'
-" Plug 'vim-scripts/YankRing.vim'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
-" Plug 'w0rp/ale'
 Plug 'craigemery/vim-autotag'
 Plug 'KabbAmine/vCoolor.vim'
 
 " completion
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
-" Plug 'Shougo/echodoc.vim'
-" Plug 'sirver/Ultisnips'
-" Plug 'honza/vim-snippets'
-" Plug 'steelsojka/deoplete-flow'
-" Plug 'townk/vim-autoclose'
-" Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
-" Plug 'ycm-core/YouCompleteMe'
-" Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kevinoid/vim-jsonc'
 
@@ -60,7 +40,6 @@ Plug 'godlygeek/tabular'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/gv.vim'
 Plug 'tpope/vim-rhubarb'
-" Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
@@ -68,8 +47,6 @@ call plug#end()
 set guifont=DejaVu\ Sans\ Mono\ Nerd\ Font\ Complete
 
 " keybinds
-" map <C-h> :NERDTreeToggle<CR>
-" map <F1> :IndentGuidesToggle<CR>
 nnoremap gc :exe ':silent !vivaldi-stable %'<CR>
 
 " source config files
